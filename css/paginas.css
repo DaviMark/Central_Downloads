@@ -1,0 +1,154 @@
+        /* Estilos Gerais */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif !important;
+            background-color: #f0f2f5;
+            overflow-y: auto;
+            overflow-x: hidden !important;
+        }
+
+        /* Sidebar */
+        #sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: #ffffff;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: 0.4s ease;
+            z-index: 1000;
+        }
+
+        #sidebar.active {
+            left: 0;
+        }
+
+        #sidebar .sidebar-header {
+            padding: 20px;
+            background-color: #011831;
+            color: #fff;
+            text-align: center;
+        }
+        .sidebar-header h3{
+            font-size: 2.5rem;
+        }
+
+        #sidebar ul.components {
+            padding: 20px;
+        }
+
+        #sidebar ul li {
+            padding: 15px 10px;
+            font-size: 1.1em;
+            display: block;
+            transition: background 0.3s;
+            border-radius: 5%;
+        }
+
+        #sidebar ul li a {
+            color: #343a40;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        #sidebar ul li a i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        #sidebar ul li:hover {
+            background-color: #f1f1f1;
+        }
+
+        #sidebar ul li a:hover {
+            color: #0069d9;
+        }
+
+        /* Main content */
+        #content {
+            width: 100%;
+            padding: 20px;
+            transition: margin-left 0.4s ease;
+        }
+
+        #sidebar.active + #content {
+            margin-left: 250px;
+        }
+
+        /* Estilos de Navbar */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-toggler {
+            background-color: #0069d9;
+        }
+
+        /* Botão de abrir o menu */
+        .toggle-btn {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        /* Efeitos de transição */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            #sidebar {
+                width: 200px;
+                left: -200px;
+            }
+
+            #sidebar.active {
+                left: 0;
+            }
+
+            #sidebar.active + #content {
+                margin-left: 200px;
+            }
+        }
+
+        /* Botões flutuantes */
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+
+        .floating-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            background-color: #0069d9;
+            color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .floating-buttons a:hover {
+            background-color: #0056b3;
+        }
+
+        .floating-buttons a i {
+            font-size: 1.5em;
+        }
+
+        .mt-6{
+            font-size: 3rem;
+        }
+
